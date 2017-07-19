@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<title>Crystal Collector Game!</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- CSS files. -->
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+
+	<!-- Jumbotron header. -->
+	<div class="container">
+		<div class="jumbotron text-center">
+			<h1>Crystal Collector Game!</h1>
+		</div>
+	</div>
+
+	<!-- Instructions. -->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1 class="instructions">Instructions</h1>
+				<hr>
+				<ul>
+					<li>Click on the crystal images below to add points to your current score.</li>
+					<li>Try to match your score with the random number generated as your goal.</li>
+					<li>Each crystal image and goal number will have a random value assigned each match.</li>
+					<li>If your score matches the goal, You Win! And the game will start over.</li>
+					<li>If your score goes over the goal, You Lose! And the game will start over.</li>
+				</ul>
+				<hr>
+			</div>
+		</div>
+	</div>
+
+	<!-- Actual Game stuff. -->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2 col-sm-6"><h2>Goal:</h2>
+				<div id="goal"></div>
+				<div id="wins">Wins: 0</div>
+			</div>
+			<div class="col-md-2 col-sm-6"><h2>Your Score:</h2>
+				<div id="score">None</div>
+				<div id="losses">Losses: 0</div>
+			</div>
+			<div class="col-md-2 col-sm-6">
+				<img class="crystal" id= "crystal1" src="assets/images/crystal.jpg" width="150" height="150">
+			</div>
+			<div class="col-md-2 col-sm-6">
+				<img class="crystal" id= "crystal2" src="assets/images/crystal.jpg" width="150" height="150">
+			</div>
+			<div class="col-md-2 col-sm-6">
+				<img class="crystal" id= "crystal3" src="assets/images/crystal.jpg" width="150" height="150">
+			</div>
+			<div class="col-md-2 col-sm-6">
+				<img class="crystal" id= "crystal4" src="assets/images/crystal.jpg" width="150" height="150">
+			</div>
+		</div>
+	</div>
+
+	<script src="assets/javascript/game.js"></script>
+
+</body>
+</html>
