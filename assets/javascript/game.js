@@ -32,10 +32,7 @@ gameStart();
 var wins = 0;
 var losses = 0;
 
-// Click functions for crystal images.
-$("#crystal1").on("click", function() {
-	scoreNum += crystal1Num;
-	$("#score").html(scoreNum);
+function checkScore() {
 	// If statement to check if user won the game or lost and increment wins and losses.
 	if (scoreNum === goalNum) {
 		wins++;
@@ -46,49 +43,29 @@ $("#crystal1").on("click", function() {
 		$("#losses").html("Losses: " + losses);
 		gameStart();
 	}
+};
+
+// Click functions for crystal images.
+$("#crystal1").on("click", function() {
+	scoreNum += crystal1Num;
+	$("#score").html(scoreNum);
+	checkScore();
 });
 
 $("#crystal2").on("click", function() {
 	scoreNum += crystal2Num;
 	$("#score").html(scoreNum);
-	// If statement to check if user won the game or lost and increment wins and losses.
-	if (scoreNum === goalNum) {
-		wins++;
-		$("#wins").html("Wins: " + wins);
-		gameStart();
-	} else if (scoreNum > goalNum) {
-		losses++;
-		$("#losses").html("Losses: " + losses);
-		gameStart();
-	}
+	checkScore();
 });
 
 $("#crystal3").on("click", function() {
 	scoreNum += crystal3Num;
 	$("#score").html(scoreNum);
-	// If statement to check if user won the game or lost and increment wins and losses.
-	if (scoreNum === goalNum) {
-		wins++;
-		$("#wins").html("Wins: " + wins);
-		gameStart();
-	} else if (scoreNum > goalNum) {
-		losses++;
-		$("#losses").html("Losses: " + losses);
-		gameStart();
-	}
+	checkScore();
 });
 
 $("#crystal4").on("click", function() {
 	scoreNum += crystal4Num;
 	$("#score").html(scoreNum);
-	// If statement to check if user won the game or lost and increment wins and losses.
-	if (scoreNum === goalNum) {
-		wins++;
-		$("#wins").html("Wins: " + wins);
-		gameStart();
-	} else if (scoreNum > goalNum) {
-		losses++;
-		$("#losses").html("Losses: " + losses);
-		gameStart();
-	}
+	checkScore();
 });
